@@ -67,7 +67,7 @@ while True:
 ### Evidence
 
 ### Wiring
- ![circuitPhoto](/thisPC/pictures/savedPictures/circuitPython.png)
+ ![circuitPhoto](/Images/CapaServo.png)
 ### Reflection
 
 
