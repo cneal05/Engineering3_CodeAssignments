@@ -39,24 +39,6 @@ What went wrong / was challenging, how'd you figure it out, and what did you lea
 ### Description & Code
 
 ```python
-Code goes here
-
-```
-
-### Evidence
-
-### Wiring
- ![circuitPhoto](/thisPC/pictures/savedPictures/circuitPython.png)
-### Reflection
-
-
-
-
-## CircuitPython_LCD
-
-### Description & Code
-
-```python
 import time
 import board
 import touchio
@@ -80,6 +62,23 @@ while True:
         my_servo.angle = 0
     time.sleep(0.05)
 
+```
+
+### Evidence
+
+### Wiring
+ ![circuitPhoto](/thisPC/pictures/savedPictures/circuitPython.png)
+### Reflection
+
+
+
+
+## CircuitPython_LCD
+
+### Description & Code
+
+```python
+Code goes here
 ```
 
 ### Evidence
