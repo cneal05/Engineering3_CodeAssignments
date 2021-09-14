@@ -45,7 +45,7 @@ Code goes here
 
 ### Evidence
 
-### Images
+### Wiring
  ![circuitPhoto](/thisPC/pictures/savedPictures/circuitPython.png)
 ### Reflection
 
