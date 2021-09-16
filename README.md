@@ -65,7 +65,8 @@ while True:
 ```
 
 ### Evidence
-
+ ![CapacitiveTouchServo](/Images/Gifs/ezgif.com-gif-maker.gif)
+ A gif of the capactive touch servo working
 ### Wiring
  ![circuitPhoto](/Images/CapaServo.png)
 ### Reflection
