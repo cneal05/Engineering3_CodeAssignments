@@ -59,10 +59,9 @@ while True:
         my_servo.angle = 90
     time.sleep(0.05)
     if touch_A2.value:
-        print("Touched A3!")
+        print("Touched A2!")
         my_servo.angle = 0
     time.sleep(0.05)
-
 ```
 
 ### Evidence
