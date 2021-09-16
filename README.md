@@ -37,6 +37,7 @@ What went wrong / was challenging, how'd you figure it out, and what did you lea
 ## CircuitPython_Servo
 
 ### Description & Code
+Create code for that makes a servo sweep between 0 and 180, then add a capacitive touch feature so that when you touch one wire, it will go one way, if you touch the other one, it will go the other way.
 
 ```python
 import time
@@ -49,8 +50,8 @@ pwm = pwmio.PWMOut(board.A3, duty_cycle=2 ** 15, frequency=50)
 
 my_servo = servo.Servo(pwm)
 
-touch_A1 = touchio.TouchIn(board.A1)  # Not a touch pin on Trinket M0!
-touch_A2 = touchio.TouchIn(board.A2)  # Not a touch pin on Trinket M0!
+touch_A1 = touchio.TouchIn(board.A1)
+touch_A2 = touchio.TouchIn(board.A2)
 
 while True:
     if touch_A1.value:
@@ -58,20 +59,17 @@ while True:
         my_servo.angle = 90
     time.sleep(0.05)
     if touch_A2.value:
-        print("Touched A3!")
+        print("Touched A2!")
         my_servo.angle = 0
     time.sleep(0.05)
-
 ```
 
 ### Evidence
 
 ### Wiring
- ![circuitPhoto](/thisPC/pictures/savedPictures/circuitPython.png)
+ ![circuitPhoto](/Images/CapaServo.png)
 ### Reflection
-
-
-
+This assignment was not very difficult, which is to be expected, being one of the first assignments of the year. Making the capacitive touch part was a little tricky, but there are many helpful websites on the internet explaining how to do it.
 
 ## CircuitPython_LCD
 
