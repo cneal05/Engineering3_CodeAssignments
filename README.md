@@ -4,7 +4,7 @@
 * [Table of Contents](#TableOfContents)
 * [Hello_CircuitPython](#Hello_CircuitPython)
 * [CircuitPython_Servo](#CircuitPython_Servo)
-* [CircuitPython_LCD](#CircuitPython_LCD)
+* [CircuitPython_UltraSensor](#CircuitPython_UltraSensor)
 * [NextAssignmentGoesHere](#NextAssignment)
 ---
 
@@ -73,7 +73,7 @@ while True:
 ### Reflection
 This assignment was not very difficult, which is to be expected, being one of the first assignments of the year. Making the capacitive touch part was a little tricky, but there are many helpful websites on the internet explaining how to do it.
 
-## CircuitPython_LCD
+## CircuitPython_UltraSensor
 
 ### Description & Code
 
