@@ -120,7 +120,7 @@ while True:
 ### Evidence
 
 ### Wiring
-
+![UltraSensorWiring](/Images/UltraSensorPhoto.png)
 ### Reflection
 
 
