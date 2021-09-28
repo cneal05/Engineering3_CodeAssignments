@@ -76,6 +76,7 @@ This assignment was not very difficult, which is to be expected, being one of th
 ## CircuitPython_UltraSensor
 
 ### Description & Code
+Use the HC-SR04 to measure the distance to an object and print that out to your serial monitor in cm. Then, you had to get the neopixel to turn red, when below 5cm, blue, when between 5 and 20cm, and green, when above 20cm. After that, your final version of the code, the color will shift on a gradient and shift the neopixel's color slowly as the object gets closer or farther away from the distance sensor.
 
 ```python
 import time
@@ -116,16 +117,12 @@ while True:
         print("Retrying!")
     time.sleep(0.1)
 ```
-
 ### Evidence
 
 ### Wiring
 ![UltraSensorWiring](/Images/UltraSensorPhoto.png)
-### Reflection
-
-
-
-
+### Reflection 
+This assignment was not the hardest after i figured out the right equations for the rgb settings, then it was pretty simple from there on. 
 
 ## CircuitPython_PhotoInterupter
 
