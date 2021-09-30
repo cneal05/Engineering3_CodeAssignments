@@ -5,7 +5,7 @@
 * [Hello_CircuitPython](#Hello_CircuitPython)
 * [CircuitPython_Servo](#CircuitPython_Servo)
 * [CircuitPython_UltraSensor](#CircuitPython_UltraSensor)
-* [NextAssignmentGoesHere](#CircuitPython_PhotoInterupter)
+* [CircuitPythonPhotoInterupter](#CircuitPython_PhotoInterupter)
 ---
 
 ## Hello_CircuitPython
