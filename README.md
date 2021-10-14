@@ -11,27 +11,25 @@
 ## Hello_CircuitPython
 
 ### Description & Code
-Description goes here
-
-Here's how you make code look like code:
+Take the code you are given and see if it works correctly and outputs the right color on your neopixel
 
 ```python
-Code goes here
+import board
+import neopixel
 
+dot = neopixel.NeoPixel(board.NEOPIXEL, 1)
+
+print("Make it red!")
+
+while True:
+    dot.fill((255,0,0))
 ```
-
 
 ### Evidence
 Pictures / Gifs of your work should go here
 
-### Wiring
-Make an account with your google ID at [tinkercad.com](https://www.tinkercad.com/learn/circuits), and use "TinkerCad Circuits to make a wiring diagram."  It's really easy!  
-Then post an image here.   [here's a quick tutorial for all markdown code, like making links](https://www.markdownguide.org/basic-syntax/)
-
 ### Reflection
-What went wrong / was challenging, how'd you figure it out, and what did you learn from that experience?  Your ultimate goal for the reflection is to pass on knowledge that will make this assignment better or easier for the next person.
-
-
+Nothing really happened that was of importance in this assignment, other than figuring out rgb values, and that they always have to be integers, and it is rgb not rbg.
 
 
 ## CircuitPython_Servo
