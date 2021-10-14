@@ -26,7 +26,7 @@ while True:
 ```
 
 ### Evidence
-Pictures / Gifs of your work should go here
+![HelloCircuitPythonPhoto](Image/HelloCircuitPythonPhoto.jpg)
 
 ### Reflection
 Nothing really happened that was of importance in this assignment, other than figuring out rgb values, and that they always have to be integers, and it is rgb not rbg.
