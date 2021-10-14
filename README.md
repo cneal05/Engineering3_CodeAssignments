@@ -162,7 +162,3 @@ while True:
 ![PhotoInterupterWiring](/Images/PhotoInterupterPhoto.png)
 ### Reflection
 
-
-![PhotoInterupterGif](https://user-images.githubusercontent.com/71349797/134724959-4f1d69a2-bb28-4c98-8dd7-6bff58e07b80.gif)
-
-Image credit goes to [Gabby D](https://github.com/gdaless20/Circuitpython)
