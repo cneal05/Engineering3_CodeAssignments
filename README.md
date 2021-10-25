@@ -29,7 +29,7 @@ while True:
 
 ### Evidence
 ![HelloCircuitPythonPhoto](Images/HelloCircuitPythonPhoto.jpg)
-
+No wiring required for this assignment, all that was used was the on-board neopixel
 ### Reflection
 Nothing really happened that was of importance in this assignment, other than figuring out rgb values, and that they always have to be integers, and it is rgb not rbg.
 
