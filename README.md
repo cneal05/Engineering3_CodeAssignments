@@ -14,6 +14,7 @@
 Take the code you are given and see if it works correctly and outputs the right color on your neopixel
 
 ```python
+`//these two imports are used to import the two libraries that I need to use for this code`
 import board
 import neopixel
 
@@ -22,6 +23,7 @@ dot = neopixel.NeoPixel(board.NEOPIXEL, 1)
 print("Make it red!")
 
 while True:
+    //sets the dot rgb equal to red
     dot.fill((255,0,0))
 ```
 
@@ -48,14 +50,17 @@ pwm = pwmio.PWMOut(board.A3, duty_cycle=2 ** 15, frequency=50)
 
 my_servo = servo.Servo(pwm)
 
+`//creates the capacitive touch for the code with these two commands`
 touch_A1 = touchio.TouchIn(board.A1)
 touch_A2 = touchio.TouchIn(board.A2)
 
 while True:
+    `//when you touch the A1 wire it turns the servo angle to 90 degrees and then waits for a very short time`
     if touch_A1.value:
         print("Touched A1!")
         my_servo.angle = 90
     time.sleep(0.05)
+    `//when you touch the A2 wire it turns the servo angle to 0 degrees and then waits for a very short time`
     if touch_A2.value:
         print("Touched A2!")
         my_servo.angle = 0
@@ -85,32 +90,40 @@ import neopixel
 sonar = adafruit_hcsr04.HCSR04(trigger_pin=board.A1, echo_pin=board.A2)
 dot = neopixel.NeoPixel(board.NEOPIXEL, 1)
 print("new code")
+
+`//creates and defines the new variables: cm, r, g, b`
 cm = 0
 r = 0
 g = 0
 b = 0
 while True:
     try:
+        `//takes the sonar.distance that the ultrasonic sensor gathers, and then sets variable cm equal to that`
         cm = sonar.distance
         print((cm))
+        `//when the cm is less than or equal to 5 the color the neopixel outputs is red`
         if cm <= 5:
             r = 255
             g = 0
             b = 0
+        `//as the cm approaches 20 cm from 5 cm the color changes on a gradient towards blue`
         elif cm <= 20:
             r = int(255 - ((cm - 5) / 15 * 255))  #
             g = 0
             b = int((cm - 5) / 15 * 255)
+        `//as the cm approaches 35 cm from 20 cm the color changes on a gradient towards green`
         elif cm <= 35:
             r = 0
             g = int((cm - 20) / 15 * 255)
             b = int(255 - ((cm - 20) / 15 * 255))
             print((r, g, b))
+        `//after it reaches 35 cm or more, it stays at green`
         else:
             r = 0
             g = 255
             b = 0
         dot.fill((r, g, b))
+    `//if the distance sensor can not gather a value for the distance it will output "Retrying!"`
     except RuntimeError:
         print("Retrying!")
     time.sleep(0.1)
