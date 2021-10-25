@@ -131,7 +131,8 @@ while True:
 ### Evidence
  ![UltrasonicSensor](Images/Gifs/ultrasonicSensor_gif.gif)
 ### Wiring
-![UltraSensorWiring](/Images/UltraSensorPhoto.png)
+![UltraSensorWiring](https://github.com/lgray52/CircuitPython/blob/main/evidence/distance_sensor_wiring.PNG?raw=true)
+[Image credit goes to Lucy G.](https://github.com/lgray52/CircuitPython)
 ### Reflection 
 This assignment was not the hardest after i figured out the right equations for the rgb settings, then it was pretty simple from there on. The RGB equations were given to us as part of the assignment, so all i had to do was plug those equations in for the right values of RG and B, and also understand what those equations were actually doing.
 
