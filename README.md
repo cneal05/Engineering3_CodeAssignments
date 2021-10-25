@@ -133,7 +133,7 @@ while True:
 ### Wiring
 ![UltraSensorWiring](/Images/UltraSensorPhoto.png)
 ### Reflection 
-This assignment was not the hardest after i figured out the right equations for the rgb settings, then it was pretty simple from there on. 
+This assignment was not the hardest after i figured out the right equations for the rgb settings, then it was pretty simple from there on. Those RGB equations arent the worst but really all you have to do it just plug in the right eqautions for the values of RG and B then when the object gets father away, the gradient changes.
 
 ## CircuitPython_PhotoInterupter
 
