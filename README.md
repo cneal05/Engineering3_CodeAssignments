@@ -74,7 +74,7 @@ while True:
 ### Wiring
  ![circuitPhoto](/Images/CapaServo.png)
 ### Reflection
-This assignment was not very difficult, which is to be expected, being one of the first assignments of the year. Making the capacitive touch part was a little tricky, but there are many helpful websites on the internet explaining how to do it.
+This assignment was not very difficult, which is to be expected, being one of the first assignments of the year. Making the capacitive touch part was a little tricky, but there are many [helpful websites](https://learn.adafruit.com/circuitpython-essentials/circuitpython-cap-touch) on the internet explaining how to do it.
 
 ## CircuitPython_UltraSensor
 
