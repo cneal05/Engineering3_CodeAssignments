@@ -74,7 +74,7 @@ while True:
 ### Wiring
  ![circuitPhoto](/Images/CapaServo.png)
 ### Reflection
-This assignment was not very difficult, which is to be expected, being one of the first assignments of the year. Making the capacitive touch part was a little tricky, but there are many [helpful websites](https://learn.adafruit.com/circuitpython-essentials/circuitpython-cap-touch) on the internet explaining how to do it.
+This assignment was not very difficult, which is to be expected, being one of the first assignments of the year. Making the capacitive touch part was a little tricky, but there are many [helpful websites](https://learn.adafruit.com/circuitpython-essentials/circuitpython-cap-touch) on the internet explaining how to do it. The main thing that you have to do to get the capacative touch to work, is to import the "touchio" library then set one of the A1-A5 analog pins on the metro board to capcative touch with "touch_A1(this can be named anything you want) = touchio.TouchIn(board.(your analog pin)" and that command will allow the capacative touch to work on that analog pin.
 
 ## CircuitPython_UltraSensor
 
