@@ -135,7 +135,17 @@ while True:
 
 [Image credit goes to Lucy G.](https://github.com/lgray52/CircuitPython)
 ### Reflection 
-This assignment required me to use the right equations for the rgb settings that made the neopixel change colors on a gradient. The RGB equations [are explained really well, here](https://circuitpython.readthedocs.io/projects/simpleio/en/latest/api.html#simpleio.map_range) to us as part of the assignment, so all i had to do was plug those equations in for the right values of RG and B, and also understand what those equations were actually doing. Another thing that was useful for this assignment was remembering the right order for RGB, for the future remember it is NOT Ruth Bader Ginsburg, it is R G B.
+This assignment required me to use the right equations for the rgb settings that made the neopixel change colors on a gradient. The RGB equations [are explained really well, here](https://circuitpython.readthedocs.io/projects/simpleio/en/latest/api.html#simpleio.map_range) to us as part of the assignment, so all i had to do was plug those equations in for the right values of RG and B, and also understand what those equations were actually doing. 
+For example, in the 5 to 20 elif statement,
+* The R(Red RGB value) value was going downwards as the distance increased,
+  * Firstly, 5 is subtracted from the distance value, because we start this gradient at 5cm.
+  * Then, we divide the value that we got before by 15 becasue that is the difference between 5 and 20, the start and the end of this gradient.
+  * After that we multipy it by 255, which is the max RGB value possible.
+  * And then finally we take 255(The max RGB value) and subtract our value from that.
+* The B(Blue RGB Value) value was increasing as the distance increased
+  * The B value is the exact same thing as the R value except we do not take 255 and subtract our value that we get, our answer is just that increasing value that we get.
+
+Another thing that was useful for this assignment was remembering the right order for RGB, for the future remember it is NOT Ruth Bader Ginsburg, it is R G B.
 
 ## CircuitPython_PhotoInterupter
 
