@@ -135,7 +135,7 @@ while True:
 
 [Image credit goes to Lucy G.](https://github.com/lgray52/CircuitPython)
 ### Reflection 
-This assignment was not the hardest after i figured out the right equations for the rgb settings, then it was pretty simple from there on. The RGB equations were given to us as part of the assignment, so all i had to do was plug those equations in for the right values of RG and B, and also understand what those equations were actually doing.
+This assignment required me to use the right equations for the rgb settings that made the neopixel change colors on a gradient. The RGB equations [are explained really well, here](https://circuitpython.readthedocs.io/projects/simpleio/en/latest/api.html#simpleio.map_range) to us as part of the assignment, so all i had to do was plug those equations in for the right values of RG and B, and also understand what those equations were actually doing. Another thing that was useful for this assignment was remembering the right order for RGB, for the future remember it is NOT Ruth Bader Ginsburg, it is R G B.
 
 ## CircuitPython_PhotoInterupter
 
