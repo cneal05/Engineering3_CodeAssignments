@@ -1,7 +1,7 @@
 # ExpertCircuitPython
  The follwing files are my Coding Assignments in ExpertCircuitPython.
 ## Table of Contents
-* [Table of Contents](#Table Of Contents)
+* [Table of Contents](#Table_Of_Contents)
 * [Classes, Objects, and Modules](#Classes_Objects_and_Modules)
 * [Fun with RGB LEDs](#FunRGB)
 ---
