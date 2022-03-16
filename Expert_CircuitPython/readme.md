@@ -2,7 +2,7 @@
  The follwing files are my Coding Assignments in ExpertCircuitPython.
 ## Table of Contents
 * [Table of Contents](#TableOfContents)
-* [Classes, Objects, and Modules](#Classes,_Objects,_and_Modules)
+* [Classes, Objects, and Modules](#Classes, Objects, and Modules)
 * []()
 ---
 
