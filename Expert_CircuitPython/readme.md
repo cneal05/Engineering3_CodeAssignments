@@ -9,7 +9,8 @@
 ## Classes_Objects_and_Modules 
 
 ### Description & Code
-
+"I want you to get an RGB blinking (or fading!), the way you're used to doing so.  AKA just get it working in a single file, at first. Once you've got it working, lets pull it apart into a module and a main/code.py file. Once you have the RGB LED blinking or fading with a class, the final step is to add a second RGB LED.  With classes, it will be so easy!"(Taken straight from the assignment page)
+This is the first engieering assignment that I have done that envolves classes. Using the new classes and modules I make code to get a RGB LED to Fade up and down in succession.
 
 ```python
 MAIN
@@ -193,7 +194,7 @@ class RGB:
 ![Classes_Objects_and_Modules](Images/Classes_Objects_and_Modules.png)
 
 ### Reflection
-.
+In the Description I said "the first ENGINEERING assignment to envolve classes and modules" because I have worked with them in my Computer science class. While these classes are different then the CS ones, they have the same concepts. So after I figured out the RGB LED it was a pretty simple assignment to complete.
 
 ## FunRGB
 
