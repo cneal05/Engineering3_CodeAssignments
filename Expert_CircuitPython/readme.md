@@ -1,15 +1,16 @@
-# CircuitPython
+# ExpertCircuitPython
  The follwing files are my Coding Assignments in ExpertCircuitPython.
 ## Table of Contents
-* [Table of Contents](#TableOfContents)
-* []()
-* []()
+* [Table of Contents](#Table_Of_Contents)
+* [Classes, Objects, and Modules](#Classes_Objects_and_Modules)
+* [Fun with RGB LEDs](#FunRGB)
 ---
 
-## Classes, Objects, and Modules 
+## Classes_Objects_and_Modules 
 
 ### Description & Code
-
+"I want you to get an RGB blinking (or fading!), the way you're used to doing so.  AKA just get it working in a single file, at first. Once you've got it working, lets pull it apart into a module and a main/code.py file. Once you have the RGB LED blinking or fading with a class, the final step is to add a second RGB LED.  With classes, it will be so easy!"(Taken straight from the assignment page)
+This is the first engieering assignment that I have done that envolves classes. Using the new classes and modules I make code to get a RGB LED to Fade up and down in succession.
 
 ```python
 MAIN
@@ -190,7 +191,204 @@ class RGB:
 ```
 
 ### Evidence
-![]()
+![Classes_Objects_and_Modules](Images/Classes_Objects_and_Modules.png)
+
+### Reflection
+In the Description I said "the first ENGINEERING assignment to envolve classes and modules" because I have worked with them in my Computer science class. While these classes are different then the CS ones, they have the same concepts. So after I figured out the RGB LED it was a pretty simple assignment to complete.
+
+## FunRGB
+
+### Description & Code
+
+
+```python
+MAIN
+
+""" This file is the class-based version of making a single LED fade"""
+import time
+import board
+from rgb import RGB  # import the LED class from the rgb module
+
+redLEDPin1 = board.D8
+greenLEDPin1 = board.D9
+blueLEDPin1 = board.D10
+blueLEDPin2 = board.D4
+greenLEDPin2 = board.D5
+redLEDPin2 = board.D7
+
+full = 65535
+half = int(65535 / 2)
+
+myRGBled1 = RGB(redLEDPin1, blueLEDPin1, greenLEDPin1)
+myRGBled2 = RGB(redLEDPin2, blueLEDPin2, greenLEDPin2)
+
+while True:
+    myRGBled1.blue()
+    myRGBled2.yellow(half)
+    time.sleep(1)
+    myRGBled1.off()
+    myRGBled2.off()
+    time.sleep(2)
+
+    myRGBled1.red()
+    myRGBled2.cyan(half)
+    time.sleep(1)
+    myRGBled1.off()
+    myRGBled2.off()
+    time.sleep(2)
+
+    myRGBled1.green()
+    myRGBled2.magenta(half)
+    time.sleep(1)
+    myRGBled1.off()
+    myRGBled2.off()
+    time.sleep(2)
+
+    myRGBled1.redBlinky()
+    myRGBled2.blueBlinky()
+    myRGBled1.off()
+    myRGBled2.off()
+    time.sleep(2)
+
+    myRGBled1.Rainbow()
+    myRGBled2.ReverseRainbow()
+    time.sleep(1)
+    myRGBled1.off()
+    myRGBled2.off()
+    time.sleep(2)
+
+RGB 
+# These are the libraries needed to fade an LED, even if you imported elsewhere
+import time
+import board
+import pwmio
+import digitalio
+
+lightBulb = digitalio.DigitalInOut(board.D13)
+lightBulb.direction = digitalio.Direction.OUTPUT
+
+
+class LED:  # It's propper coding to always write a line explaining a class
+    # with a "docstring."   Like this:
+    """LED is a class designed for a single color LED to fade in and out"""
+
+    def __init__(self, ledpin, name):
+        # init is like void Setup() from arduino.  Initialize your pins here
+        # start each object with "self.object"
+        self.led = pwmio.PWMOut(ledpin, frequency=5000, duty_cycle=0)
+        self.name = name
+
+    def fadeUp(self):
+        lightBulb.value = 65535
+        for i in range(255):
+            if i < (255 / 2):
+                self.led.duty_cycle = int(i * 65535 / (255 / 2))
+
+            print(self.name, ", ", self.led.duty_cycle)
+            time.sleep(0.01)
+
+    def fadeDown(self):
+        lightBulb.value = 65535
+        for i in range(255):
+            if i > (255 / 2):
+                self.led.duty_cycle = 65535 - int((i - (255 / 2)) * 65535 / (255 / 2))
+            print(self.name, ", ", self.led.duty_cycle)
+            time.sleep(0.01)
+
+    def on(self, brightness=65535):  # Remember "on" means duty cycles < 65535
+        self.led.duty_cycle = 65535 - brightness
+        lightBulb.value = 65535
+
+    def off(self):  # "off" means duty cycle should be full.
+        self.led.duty_cycle = 65535
+
+
+class RGB:
+    from rgb import LED
+
+    def __init__(self, redPin, bluePin, greenPin):
+        self.myRedLED = LED(redPin, "red")
+        self.myBlueLED = LED(bluePin, "blue")
+        self.myGreenLED = LED(greenPin, "green")
+
+    def red(self, brightness=65535):
+        self.myRedLED.on(brightness)
+        self.myBlueLED.off()
+        self.myGreenLED.off()
+
+    def blue(self, brightness=65535):
+        self.myRedLED.off()
+        self.myBlueLED.on(brightness)
+        self.myGreenLED.off()
+
+    def green(self, brightness=65535):
+        self.myRedLED.off()
+        self.myBlueLED.off()
+        self.myGreenLED.on(brightness)
+
+    def yellow(self, brightness=65535):
+        self.myRedLED.on(brightness)
+        self.myBlueLED.off
+        self.myGreenLED.on(brightness)
+
+    def cyan(self, brightness=65535):
+        self.myRedLED.off()
+        self.myBlueLED.on(brightness)
+        self.myGreenLED.on(brightness)
+
+    def magenta(self, brightness=65535):
+        self.myRedLED.on(brightness)
+        self.myBlueLED.on(brightness)
+        self.myGreenLED.off()
+
+    def off(self):
+        self.myRedLED.off()
+        self.myBlueLED.off()
+        self.myGreenLED.off()
+        lightBulb.value = 0
+
+    def redBlinky(self, brightness=65535):
+        self.myRedLED.fadeDown()
+        time.sleep(0.3)
+        self.myRedLED.fadeUp()
+        time.sleep(0.3)
+
+    def blueBlinky(self, brightness=65535):
+        self.myBlueLED.fadeDown()
+        time.sleep(0.3)
+        self.myBlueLED.fadeUp()
+        time.sleep(0.3)
+
+
+    def greenBlinky(self, brightness=65535):
+        self.myGreenLED.fadeDown()
+        time.sleep(0.3)
+        self.myGreenLED.fadeUp()
+        time.sleep(0.3)
+
+    def Rainbow(self, brightness = 65535):
+        self.myRedLED.fadeDown()
+        self.myGreenLED.fadeDown()
+        self.myRedLED.fadeUp()
+        self.myBlueLED.fadeDown()
+        self.myGreenLED.fadeUp()
+        self.myRedLED.fadeDown()
+        self.myBlueLED.fadeUp()
+        self.myRedLED.fadeUp()
+
+    def ReverseRainbow(self, brightness = 65535):
+        self.myRedLED.fadeDown()
+        self.myBlueLED.fadeDown()
+        self.myRedLED.fadeUp()
+        self.myGreenLED.fadeDown()
+        self.myBlueLED.fadeUp()
+        self.myRedLED.fadeDown()
+        self.myGreenLED.fadeUp()
+        self.myRedLED.fadeUp()
+```
+
+### Evidence
+![COM_Fun_With_RGB_LED](Images/Circuit_COMFunWithRGB.png)
 
 ### Reflection
 .
