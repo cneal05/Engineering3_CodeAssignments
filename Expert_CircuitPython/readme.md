@@ -62,7 +62,7 @@ while True:
   
 ```
 ### Evidence
-![LCD_gif](/Expert_CircuitPython/Images/Gifs/LCD_gif.gif)
+![LCD_gif](/Expert_CircuitPython/Images/Gifs/LCD_gif.mp4)
 
 ![]()
 ### Reflection
