@@ -260,7 +260,7 @@ In the Description I said "the first ENGINEERING assignment to envolve classes a
 ## FunRGB
 
 ### Description & Code
-
+get two RGB LEDs lit up and working, then implement some methods to do special things, such as the method "Blinky" where we can decide what that means, "Fade Up" and "Fade Down" which do what they say, and other methods that we feel like making.
 
 ```python
 MAIN
@@ -452,4 +452,4 @@ class RGB:
 ![COM_Fun_With_RGB_LED](Images/Circuit_COMFunWithRGB.png)
 
 ### Reflection
-.
+After getting the first few methods functioning and working, the following code/methods after that were pretty simple to do. The only thing that is really improtant to remember for the future is that you need to figure out which of the two RGB LEDs you have, cause you can either have the normal one, where if you want green you put in (0, 255, 0), or the reversed one, where you would say, (255, 0, 255).
