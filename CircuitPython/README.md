@@ -68,7 +68,7 @@ while True:
 ```
 
 ### Evidence
- ![CapacitiveTouchServo](/Images/Gifs/ezgif.com-gif-maker.gif)
+ ![CapacitiveTouchServo](/CircuitPython/Images/Gifs/ezgif.com-gif-maker.gif)
  
  A gif of the capactive touch servo working
 ### Wiring
@@ -182,8 +182,8 @@ while True:
 ```
 
 ### Evidence
-![PhotoInterupterGif](/Images/Gifs/PhotoInterupter_gif.gif)
+![PhotoInterupterGif](CircuitPython/Images/Gifs/PhotoInterupter_gif.gif)
 ### Wiring 
-![PhotoInterupterWiring](/Images/PhotoInterupterPhoto.png)
+![PhotoInterupterWiring](CircuitPython/Images/PhotoInterupterPhoto.png)
 ### Reflection
 
