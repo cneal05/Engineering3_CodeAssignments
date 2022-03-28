@@ -64,8 +64,10 @@ while True:
 ### Evidence
 ![LCD_gif](/Expert_CircuitPython/Images/Gifs/LCD_gif.gif)
 
-![](LCD_CapaTouch.png)
+![LCD_Capa](/Expert_CircuitPython/Images/LCD_CapaTouch.png)
+
 this image shows the wiring for the capacitive touch part to this wiring, but just shows the lcd kind of connected. The photo below is the wiring diagram from [LastMinuteEngineers](https://lastminuteengineers.com/i2c-lcd-arduino-tutorial/), that shows the correct wiring of the LCD board.
+![LCD_Wiring](/Expert_CircuitPython/Images/LCD_I2c_Wiring.png)
 ### Reflection
 For this assignment I used the resources I was given and went through the class accounts repository and went through the different students reposiotories and took someones code (Jay Conklin's) and gave him credit at the top of the assignment. Being able to take someones code and give credit correctly is a very useful tool that i will use a lot in my life if I countinue to persue engineering, programming, or really anything.
 
